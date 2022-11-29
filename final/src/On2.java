@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class On2 {
 
     public static int[] list= {-93, -36, 25, 44, -30 ,-21, 34, 56, 82 ,64};
@@ -7,16 +5,20 @@ public class On2 {
     public static <T> void sorting(){
         
         System.out.println("\nData set before insertion sorting:");
-        System.out.println(Arrays.toString(list));
+        for(int i=0; i< list.length ;i++){
+            System.out.print(list[i] + " ");
+        }
 
-        System.out.println("\nData set after insertion sorting:");
-        System.out.println(insertionSort(list));
-        
-        
+        System.out.println("\n\nData set after insertion sorting:");
+        int [] data = insertionSort(list);
+        for(int i=0; i< list.length ;i++){
+            System.out.print(data[i] + " ");
+        }
+        System.out.println("\n");
     }
     
 
-    public static String insertionSort(int[] data)
+    public static int[] insertionSort(int[] data)
     {
         for (int index = 1; index < data.length; index++)
         {
@@ -32,7 +34,7 @@ public class On2 {
 			
             data[position] = key;
         }
-        return Arrays.toString(data);
+        return (data);
     }		
 
 

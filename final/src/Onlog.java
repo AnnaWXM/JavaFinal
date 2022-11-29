@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Onlog {
 
     public static int[] list= {-7, 1, -81, -56, -91, 37, 41, 28, 34, -27};
@@ -7,20 +5,25 @@ public class Onlog {
     public static <T> void sorting(){
         
         System.out.println("\nData set before quicksort:");
-        System.out.println(Arrays.toString(list));
+        for(int i=0; i< list.length ;i++){
+            System.out.print(list[i] + " ");
+        }
 
-        System.out.println("\nData set after quickort:");
+        System.out.println("\n\nData set after quickort:");
         quickSort(list);
-        
+        System.out.println("\n");
         
     }
     public static void quickSort(int[] data)
     {
-        Sort(data, 0, data.length - 1);
-        System.out.println(Arrays.toString(data));
+        int [] list = Sort(data, 0, data.length - 1);
+       
+        for(int i=0; i< list.length ;i++){
+            System.out.print(list[i] + " ");
+        }
     }
 
-    private static void Sort(int[] data, int min, int max)
+    private static int[] Sort(int[] data, int min, int max)
     {
         if (min < max)
         {
@@ -33,8 +36,9 @@ public class Onlog {
             // sort the right partition (higher values)
             Sort(data, indexofpartition + 1, max);
         }
-        
+        return data;    
     }	
+
     private static int partition(int[] data, int min, int max)
 	{
         int partitionelement;

@@ -18,22 +18,23 @@ public class App {
             System.out.print("\nYour choice:  ");
             choice = in.nextInt();
 
-            if(choice == 1){
-                LinearSearch.LinearS();
+            switch(choice) {
+                case 1:
+                    LinearSearch.LinearS();
+                    break;
+                case 2:
+                    BinarySearch.BinaryS();
+                    break;
+                case 3:
+                    On2.sorting();
+                    break;
+                case 4:
+                    Onlog.sorting();
+                    break;
+                case 5:
+                    System.out.println("This FUnction not define yet.");
+                    break;
             }
-
-            if(choice == 2){
-                BinarySearch.BinaryS();
-            }
-
-            if(choice == 3){
-                On2.sorting();
-            }
-
-            if(choice == 4){
-                Onlog.sorting();
-            }
-
         }    
     }
 }
